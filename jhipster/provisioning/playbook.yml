@@ -1,0 +1,27 @@
+---
+- hosts: all
+  become: yes
+
+  tasks:
+    - name: Install Java
+      yum:
+        name: java-1.8.0-openjdk
+        state: present
+
+    - name: Install npm and Node.js
+      yum:
+        name: npm
+        state: present
+        enablerepo: epel
+
+    - name: Install Yeoman
+      npm:
+        name: yo
+        global: yes
+        state: present
+
+    - name: Install JHipster
+      npm:
+        name: generator-jhipster
+        global: yes
+        state: present
