@@ -4,7 +4,7 @@ Vagrant boxes, provisioned via Ansible, for easy setup of local development envi
 
 Box setups for:
 
-- [JHipster](../blob/master/jhipster/Vagrantfile)
+- [JHipster](jhipster/Vagrantfile)
 
 ## Requirements
 
@@ -13,7 +13,7 @@ Box setups for:
 
 ## License
 
-[MIT](../blob/master/LICENSE)
+[MIT](LICENSE)
 
 ## Author Information
 
