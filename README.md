@@ -4,7 +4,9 @@ Vagrant boxes, provisioned via Ansible, for easy setup of local development envi
 
 Box setups for:
 
+- [Ansible](ansible/Vagrantfile)
 - [JHipster](jhipster/Vagrantfile)
+- [Ubuntu-Desktop](ubuntu-desktop/Vagrantfile)
 
 ## Requirements
 
