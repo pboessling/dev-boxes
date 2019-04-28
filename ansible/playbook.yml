@@ -3,4 +3,4 @@
 
   tasks:
     - debug:
-      msg: "Control machine is ready!"
+        msg: "Control machine is ready!"
