@@ -5,14 +5,23 @@
   tasks:
     - name: Install Java
       yum:
-        name: java-1.8.0-openjdk
+        name: java-11-openjdk
         state: present
 
-    - name: Install npm and Node.js
+    - name: Download Node Repo Install Script
+      get_url:
+        url: https://rpm.nodesource.com/setup_12.x
+        dest: /tmp/node_setup_12.x.sh
+        mode: '0755'
+
+    - name: Install Node Repo
+      shell: /tmp/node_setup_12.x.sh
+      become: true
+
+    - name: Install Node and npm
       yum:
-        name: npm
+        name: nodejs
         state: present
-        enablerepo: epel
 
     - name: Install Yeoman
       npm:
@@ -24,4 +33,9 @@
       npm:
         name: generator-jhipster
         global: yes
+        state: present
+
+    - name: Install Git
+      yum:
+        name: git
         state: present
