@@ -1,0 +1,9 @@
+---
+- hosts: all
+  become: yes
+
+  tasks:
+    - name: Install Asciidoctor
+      dnf:
+        name: asciidoctor
+        state: present
